@@ -328,7 +328,8 @@ plot(stepsAvgByInterval, type=&quot;l&quot;, xlab=&quot;Intervals (5 min each)&q
 <p><strong>1. Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with NAs)</strong></p>
 <pre class="r"><code>nrow(rawActivityData[is.na(rawActivityData),])</code></pre>
 <pre><code>## [1] 2304</code></pre>
-<p><strong>2. Devise a strategy for filling in all of the missing values in the dataset.</strong></p>
+<p><strong>2. Devise a strategy for filling in all of the missing values in the dataset. </strong></p>
+<p><strong>Strategy used: Using mean of steps by interval as value for imputing NAs in the original dataset</strong></p>
 <pre class="r"><code>  activityDataImputed &lt;- rawActivityData
   for (i in 1:nrow(activityDataImputed)) { 
       if( is.na(activityDataImputed$steps[i] )) { 

@@ -77,7 +77,9 @@ stepsAvgByInterval[which(stepsAvgByInterval$average==max(stepsAvgByInterval$aver
 nrow(rawActivityData[is.na(rawActivityData),])
 ```
 
-**2. Devise a strategy for filling in all of the missing values in the dataset.**
+**2. Devise a strategy for filling in all of the missing values in the dataset. **
+
+**Strategy used: Using mean of steps by interval as value for imputing NAs in the original dataset**
 
 ```{r}
   activityDataImputed <- rawActivityData
